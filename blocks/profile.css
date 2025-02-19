@@ -22,7 +22,6 @@
   line-height: 1;
   text-overflow: ellipsis;
   overflow: hidden;
-  line-clamp: 3;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -37,7 +36,6 @@
   opacity: 70%;
   text-overflow: ellipsis;
   overflow: hidden;
-  line-clamp: 3;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
@@ -45,12 +43,12 @@
 }
 
 .profile__edit {
-  margin-top: 114px;
+  margin-top: auto;
   border: none;
   background-color: transparent;
   opacity: 70%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 8px;
   font-size: 16px;
@@ -67,12 +65,13 @@
 }
 
 .profile__button {
-  margin: 142px 0 0 auto;
+  margin-top: auto;
+  margin-left: auto;
   border-radius: 8px;
   width: 149px;
   height: 52px;
   background-color: #212121;
-  color: #fff;
+  color: #fcf5e5;
   display: flex;
   gap: 8px;
   justify-content: center;
@@ -127,7 +126,6 @@
   }
 
   .profile__button {
-    height: 52px;
     width: 288px;
     margin: 0 auto;
   }
@@ -135,5 +133,12 @@
   .profile__edit {
     margin: 0 auto;
     padding-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .profile__button {
+    margin: 0 auto;
+    width: 144px;
   }
 }
