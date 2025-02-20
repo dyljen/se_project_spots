@@ -6,6 +6,7 @@
   display: block;
   height: 413px;
   width: 413px;
+  margin: 0;
 }
 
 .card__content {
@@ -13,7 +14,7 @@
   justify-content: space-between;
   align-items: center;
   color: #212121;
-  margin-bottom: 12px;
+  margin-top: 12px;
 }
 
 .card__like-btn {
@@ -33,7 +34,7 @@
 }
 
 .card__title {
-  margin: 12px 0 0;
+  margin: 0;
   font-weight: 500;
   line-height: 1.2;
   font-size: 20px;
@@ -46,29 +47,10 @@
   .card__title {
     font-size: 16px;
     line-height: 1;
-    margin: 0;
   }
   .card__image {
     height: 288px;
     width: 100%;
-    margin: 0;
-  }
-  .card__content {
-    margin: 12px 0;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .card__image {
-    height: 144px;
-    width: 144px;
-    margin: 0;
-  }
-  .card__content {
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      overflow: hidden;
-      max-width: 144px;
-    }
+    max-width: 288px;
   }
 }

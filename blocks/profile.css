@@ -1,6 +1,7 @@
 .profile {
   display: flex;
   padding: 34px 0 20px;
+  border-bottom: 1px rgba(33, 33, 33, 0.4) solid;
 }
 
 .profile__avatar {
@@ -26,6 +27,7 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   max-width: 420px;
+  color: #212121;
 }
 
 .profile__description {
@@ -40,6 +42,7 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   max-width: 420px;
+  color: #212121;
 }
 
 .profile__edit {
@@ -56,6 +59,7 @@
   line-height: 1;
   padding: 0;
   font-family: poppins, Arial, Helvetica, sans-serif;
+  color: #212121;
 }
 
 .profile__edit:hover {
@@ -68,6 +72,7 @@
   margin-top: auto;
   margin-left: auto;
   border-radius: 8px;
+  border: none;
   width: 149px;
   height: 52px;
   background-color: #212121;
@@ -126,19 +131,11 @@
   }
 
   .profile__button {
-    width: 288px;
-    margin: 0 auto;
+    width: 100%;
   }
 
   .profile__edit {
     margin: 0 auto;
     padding-bottom: 20px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  .profile__button {
-    margin: 0 auto;
-    width: 144px;
   }
 }

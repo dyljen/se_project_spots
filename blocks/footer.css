@@ -7,4 +7,10 @@
   justify-content: center;
   padding: 60px 0 60px;
   margin: 0 auto;
+  color: #212121;
+}
+
+.footer__copyright {
+  margin: 0;
+  padding: 0;
 }

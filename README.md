@@ -24,3 +24,5 @@ To build upon this starting point, Spots will be made more functional and intera
 
 This page is deployed through GitHub:
 https://dyljen.github.io/se_project_spots/
+
+My plan is to record and link the video in the next submission
