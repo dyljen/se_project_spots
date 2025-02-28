@@ -15,7 +15,7 @@
   padding: 0 10px;
 }
 
-.modal__opened {
+.modal_opened {
   visibility: visible;
 }
 
@@ -26,6 +26,7 @@
   position: relative;
   width: 100%;
   box-sizing: border-box;
+  border-radius: 8px;
 }
 
 .modal__close-btn {
@@ -42,7 +43,6 @@
 
 .modal__close-btn:hover {
   opacity: 100%;
-  transition: 0.5s;
 }
 
 .modal__title {
@@ -51,9 +51,6 @@
   color: #212121;
   line-height: 1;
   font-weight: 500;
-}
-
-.modal__form {
 }
 
 .modal__label {
