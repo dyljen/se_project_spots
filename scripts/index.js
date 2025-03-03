@@ -1,28 +1,29 @@
 const initialCards = [
   {
-    name: "lobster",
-    link: "https://unsplash.com/photos/lobster-on-white-saucer-YeOMRwgvPv4",
+    name: "Lobster",
+    link: "https://images.unsplash.com/photo-1559814048-149b70765d47?q=80&w=2624&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
-    name: "oyster",
-    link: "https://unsplash.com/photos/person-in-black-leather-jacket-holding-silver-fork-7q6pW_OJFx8",
+    name: "Oyster",
+    link: "https://images.unsplash.com/photo-1616977782967-a1859e09b014?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
-  { name: "bass", link: "https://unsplash.com/photos/A34kA5Xi_b4" },
   {
-    name: "tuna",
-    link: "https://unsplash.com/photos/gray-tuna-fish-BRnnJ6vVNdY",
+    name: "Bass",
+    link: "https://images.unsplash.com/photo-1722797657635-8a57ebd1d757?q=80&w=3088&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+  },
+  {
+    name: "Tuna",
+    link: "https://images.unsplash.com/photo-1566177229701-8895c29b9c68?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     name: "Crab",
-    link: "https://unsplash.com/photos/brown-and-white-crab-J3_ylL4__2U",
+    link: "https://images.unsplash.com/photo-1576727431775-2062c0234ca7?q=80&w=3164&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
   {
     name: "Shrimp",
-    link: "https://unsplash.com/photos/pile-of-shrimps-r4QVfQtytQ4",
+    link: "https://images.unsplash.com/photo-1578069744397-2f3942a02a7b?q=80&w=3024&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
   },
 ];
-
-console.log(initialCards);
 
 const profileEditButton = document.querySelector(".profile__edit");
 
@@ -41,6 +42,26 @@ const descriptionInputModal = document.querySelector(
 );
 
 const editFormElement = document.querySelector(".modal__form");
+
+const cardTemplate = document.querySelector("#card__template");
+
+const cardsList = document.querySelector(".cards__list");
+
+function getCardElement(data) {
+  const cardElement = cardTemplate.content
+    .querySelector(".card")
+    .cloneNode(true);
+
+  const cardNameEl = cardElement.querySelector(".card__title");
+  const cardImageEl = cardElement.querySelector(".card__image");
+
+  cardNameEl.textContent = data.name;
+
+  cardImageEl.src = data.link;
+  cardImageEl.alt = "${data.name} image";
+
+  return cardElement;
+}
 
 function openModal() {
   nameInputModal.value = profileName.textContent;
@@ -64,3 +85,8 @@ profileEditButton.addEventListener("click", openModal);
 modalExitButton.addEventListener("click", closeModal);
 
 editFormElement.addEventListener("submit", handleEditFormSubmit);
+
+for (let i = 0; i < initialCards.length; i++) {
+  const cardElement = getCardElement(initialCards[i]);
+  cardsList.prepend(cardElement);
+}
