@@ -1,6 +1,7 @@
 .card {
   max-width: 413px;
 }
+
 .card__image {
   border-radius: 8px;
   display: block;
@@ -18,7 +19,7 @@
 }
 
 .card__like-btn {
-  opacity: 40%;
+  opacity: 0.4;
   border: none;
   background-color: transparent;
   width: 23px;

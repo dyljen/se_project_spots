@@ -49,24 +49,20 @@
         <section class="cards page__section">
           <ul class="cards__list">
             <template id="card__template">
-            <li class="card">
-              <img
-                class="card__image"
-                src=""
-                alt=""
-              />
-              <div class="card__content">
-                <h2 class="card__title"></h2>
-                <button class="card__like-btn" type="button">
-                  <img
-                    class="card__like-icon"
-                    src="./images/like-icon.svg"
-                    alt="like button heart"
-                  />
-                </button>
-              </div>
-            </li>
-          </template>
+              <li class="card">
+                <img class="card__image" src="" alt="" />
+                <div class="card__content">
+                  <h2 class="card__title"></h2>
+                  <button class="card__like-btn" type="button">
+                    <img
+                      class="card__like-icon"
+                      src="./images/like-icon.svg"
+                      alt="like button heart"
+                    />
+                  </button>
+                </div>
+              </li>
+            </template>
           </ul>
         </section>
       </main>
@@ -78,16 +74,29 @@
           <button class="modal__close-btn" type="button"></button>
           <h2 class="modal__title">Edit Profile</h2>
           <form name="edit-profile" class="modal__form">
-            <label class="modal__label" for="profile__name-input">Name
-              <input type="text" id="profile__name-input" class="modal__input" placeholder="Type your name">
+            <label class="modal__label" for="profile__name-input"
+              >Name
+              <input
+                type="text"
+                id="profile__name-input"
+                class="modal__input"
+                placeholder="Type your name"
+              />
             </label>
-            <label class="modal__label" for="profile__description-input">Description
-              <input type="text" id="profile__description-input" class="modal__input" placeholder="Describe yourself">
+            <label class="modal__label" for="profile__description-input"
+              >Description
+              <input
+                type="text"
+                id="profile__description-input"
+                class="modal__input"
+                placeholder="Describe yourself"
+              />
             </label>
             <button class="modal__submit-btn" type="submit">Save</button>
           </form>
         </div>
       </div>
+    </div>
     <script defer src="./scripts/index.js"></script>
   </body>
 </html>
