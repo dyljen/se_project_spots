@@ -81,6 +81,7 @@
                 id="profile__name-input"
                 class="modal__input"
                 placeholder="Type your name"
+                name="name"
               />
             </label>
             <label class="modal__label" for="profile__description-input"
@@ -90,6 +91,36 @@
                 id="profile__description-input"
                 class="modal__input"
                 placeholder="Describe yourself"
+                name="description"
+              />
+            </label>
+            <button class="modal__submit-btn" type="submit">Save</button>
+          </form>
+        </div>
+      </div>
+      <div class="modal" id="add-card-modal">
+        <div class="modal__container">
+          <button class="modal__close-btn" type="button"></button>
+          <h2 class="modal__title">New Post</h2>
+          <form name="edit-profile" class="modal__form">
+            <label class="modal__label" for="card-link-input"
+              >Image Link
+              <input
+                type="url"
+                id="card-link-input"
+                class="modal__input"
+                placeholder="Paste a link to the picture"
+                name="link"
+              />
+            </label>
+            <label class="modal__label" for="card-name-input"
+              >Caption
+              <input
+                type="text"
+                id="card-name-input"
+                class="modal__input"
+                placeholder="Type your caption"
+                name="name"
               />
             </label>
             <button class="modal__submit-btn" type="submit">Save</button>
