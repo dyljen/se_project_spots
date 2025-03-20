@@ -42,6 +42,7 @@
 
 .card__like-btn_liked:hover {
   background: url(../images/like__icon-like-hover.svg) no-repeat;
+  cursor: pointer;
 }
 
 .card__delete-btn {
@@ -56,6 +57,7 @@
 
 .card__delete-btn:hover {
   background: url(../images/delete_btn-hover.svg);
+  cursor: pointer;
 }
 
 .card__title {
